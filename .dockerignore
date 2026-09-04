@@ -1,0 +1,46 @@
+# === Blender Source Code — Not needed for the web service ===
+.git/
+.gitignore
+.gitattributes
+.gitmodules
+.git-blame-ignore-revs
+.clang-format
+.clang-tidy
+.editorconfig
+CMakeLists.txt
+GNUmakefile
+make.bat
+README.md
+AUTHORS
+COPYING
+pyproject.toml
+
+# Blender source directories (not needed for the web service)
+source/
+extern/
+intern/
+scripts/
+release/
+tests/
+tools/
+doc/
+lib/
+locale/
+assets/
+build_files/
+.well-known/
+.gitea/
+.github/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db

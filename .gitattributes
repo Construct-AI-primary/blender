@@ -116,3 +116,8 @@ scripts/modules/_bpy_internal/assets/remote_library/*_openapi.py linguist-genera
 # server that doesn't serve them. By disabling LFS here, git will check out
 # small pointer files instead of trying to download the real objects.
 assets/** !filter !diff !merge text
+# Disable ALL remaining Git LFS rules globally — the LFS server for this repo
+# fork/mirror returns 404 for ALL objects, including doc/, release/, tests/ etc.
+# This overrides every wildcard LFS pattern above. All large directories are
+# excluded from the Docker build via .dockerignore, so LFS pointer files are fine.
+* !filter !diff !merge text
