@@ -1,0 +1,1 @@
+# Blender internal scripts — run inside Blender's Python interpreter via subprocess

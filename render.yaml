@@ -1,0 +1,20 @@
+# Render Blueprint Configuration
+# Deploy this Blender Web Service to Render
+# See: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: blender-service
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: standard  # Needs 2GB+ RAM for Blender; free tier may be limited
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: BLENDER_THREADS
+        value: "4"
+      - key: MAX_UPLOAD_SIZE_MB
+        value: "500"
+      - key: TEMP_DIR
+        value: /tmp/blender_service
