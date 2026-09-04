@@ -7,7 +7,7 @@ services:
     name: blender-service
     env: docker
     dockerfilePath: ./Dockerfile
-    plan: standard  # Needs 2GB+ RAM for Blender; free tier may be limited
+    plan: standard  # Requires 2.5GB+ RAM for Blender
     healthCheckPath: /health
     envVars:
       - key: PYTHONUNBUFFERED
@@ -18,3 +18,5 @@ services:
         value: "500"
       - key: TEMP_DIR
         value: /tmp/blender_service
+      - key: GIT_LFS_SKIP_SMUDGE
+        value: "1"
