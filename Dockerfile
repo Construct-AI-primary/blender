@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     xz-utils \
     # Blender runtime dependencies
-    libgl1-mesa-glx \
+    libgl1 \
     libglib2.0-0 \
     libsm6 \
     libxext6 \
@@ -43,8 +43,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libxcb-randr0 \
     libxcb-render-util0 \
     libxcb-sync1 \
-    libxcb-util1 \
-    libxcb-xkb1 \
+    libxcb-util0 \
     libxcb-xv0 \
     libxkbcommon-x11-0 \
     libnss3 \
